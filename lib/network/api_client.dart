@@ -22,7 +22,7 @@ abstract class ApiClient {
       error: true,
       compact: true,
     );
-    // defining connectTimeout  and receiveTimeout  you can increase or decrease depends on server
+    // defining connectTimeout and receiveTimeout,you can increase or decrease depends on server
     final baseOptions = BaseOptions(
         connectTimeout: const Duration(seconds: 5),
         receiveTimeout: const Duration(seconds: 5));

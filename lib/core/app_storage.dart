@@ -21,7 +21,7 @@ class AppStorage {
     _prefs = await SharedPreferences.getInstance();
   }
 
-  //storing toking
+  //storing token
   setAccessToken(String value) {
     return _prefs?.setString(_accessToken, value);
   }
@@ -33,6 +33,7 @@ class AppStorage {
 
 
 
+  //clearing the data
   clearData() {
     _prefs?.setString(_accessToken, "");
   }
