@@ -25,9 +25,9 @@ class ApiService {
       if (e is DioException) {
         Logger.log(msg: "exception is $e and $_");
         return ApiResult()
-          ..setException(ErrorHandler.dioException(error: e), _);
+          ..setException(ErrorHandler.dioException(error: e),);
       }
-      return ApiResult()..setException(ErrorHandler.otherException(), _);
+      return ApiResult()..setException(ErrorHandler.otherException(),);
     }
   }
 
@@ -39,9 +39,9 @@ class ApiService {
     } catch (e, _) {
       if (e is DioException) {
         return ApiResult()
-          ..setException(ErrorHandler.dioException(error: e), _);
+          ..setException(ErrorHandler.dioException(error: e),);
       }
-      return ApiResult()..setException(ErrorHandler.otherException(), _);
+      return ApiResult()..setException(ErrorHandler.otherException(),);
     }
   }
 
@@ -53,9 +53,9 @@ class ApiService {
     } catch (e, _) {
       if (e is DioException) {
         return ApiResult()
-          ..setException(ErrorHandler.dioException(error: e), _);
+          ..setException(ErrorHandler.dioException(error: e),);
       }
-      return ApiResult()..setException(ErrorHandler.otherException(), _);
+      return ApiResult()..setException(ErrorHandler.otherException(),);
     }
   }
 }

@@ -10,10 +10,10 @@ class SampleScreen extends StatefulWidget {
   const SampleScreen({super.key});
 
   @override
-  State<SampleScreen> createState() => _LoginScreenState();
+  State<SampleScreen> createState() => _SampleScreenState();
 }
 
-class _LoginScreenState extends State<SampleScreen> {
+class _SampleScreenState extends State<SampleScreen> {
   //loader flag whether to determine show the loader
   bool _isLoading = true;
 

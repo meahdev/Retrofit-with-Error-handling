@@ -1,13 +1,16 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:retrofit_with_error_handling/network/api_service.dart';
 
 import '../core/app_storage.dart';
-import '../core/global.dart';
 import '../core/logger.dart';
 
 
+
+/// using this key when we don't have direct access with Build context
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 /// This class is used for handling 401
 /// other errors handling in Api Result Generic class

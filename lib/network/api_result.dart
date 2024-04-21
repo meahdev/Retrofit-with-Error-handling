@@ -5,11 +5,9 @@ import 'error_handler.dart';
 class ApiResult<T> {
   ErrorHandler? _exception;
   T? _data;
-  StackTrace?_stackTrace;
 
-  setException(ErrorHandler error,StackTrace stackTrace) {
+  setException(ErrorHandler error) {
     _exception = error;
-    _stackTrace =stackTrace;
   }
   setData(T data){
     _data = data;
@@ -22,7 +20,5 @@ class ApiResult<T> {
   get getException {
     return _exception;
   }
-  get getStackTrace {
-    return _stackTrace;
-  }
+
 }

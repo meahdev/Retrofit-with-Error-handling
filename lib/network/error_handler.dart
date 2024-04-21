@@ -10,12 +10,10 @@ class ErrorHandler implements Exception {
   ErrorHandler(this._errorMessage);
 
 
-  //error will be network related
   ErrorHandler.dioException({required DioException error}) {
     _handleDioException(error);
   }
 
-  //error will be type ,cast etc..
   ErrorHandler.otherException() {
     _handleOtherException();
   }
@@ -25,12 +23,14 @@ class ErrorHandler implements Exception {
     return _errorMessage;
   }
 
+  //error will be type ,cast etc..
   _handleOtherException() {
     _errorMessage = "Something went Wrong";
     ErrorHandler serverError = ErrorHandler(_errorMessage);
     return serverError;
   }
 
+  //error will be network related
   _handleDioException(DioException error) {
     ErrorHandler serverError;
     switch (error.type) {
